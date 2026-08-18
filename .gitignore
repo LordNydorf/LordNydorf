@@ -2,6 +2,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+preview.html
 
 # readme-aura: ensure generated files are tracked
 !.github/assets/

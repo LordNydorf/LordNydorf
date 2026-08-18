@@ -185,8 +185,7 @@
       {[
         { name: 'Flutter & Dart', color: '#38bdf8' },
         { name: 'React & Next.js', color: '#a78bfa' },
-        { name: 'FastAPI & Python', color: '#34d399' },
-        { name: 'Google Gemini AI', color: '#f472b6' },
+        { name: 'FastAPI & Python', color: '#34d399' }, 
         { name: 'System Architecture', color: '#fbbf24' }
       ].map(function(t, i) {
         return (
@@ -282,7 +281,7 @@
 })()
 ```
 
-```aura width=860 height=240
+```aura width=860 height=600
 (function() {
   var projects = [
     {
@@ -309,7 +308,60 @@
       desc: 'Full-featured learning web application with solved previous year papers, curated video playlists & interactive quizzes.',
       tech: 'React.js · JavaScript · Modern UI',
     },
+    {
+      num: '// 04',
+      title: 'PPE-Detection-using-YOLO',
+      tag: 'AI / COMPUTER VISION',
+      color: '#f43f5e',
+      desc: 'Real-time safety compliance monitoring system detecting PPE violations in factory environments with YOLO models.',
+      tech: 'Python · YOLOv8 · Computer Vision',
+    },
+    {
+      num: '// 05',
+      title: 'ProofShot',
+      tag: 'MOBILE & SECURITY',
+      color: '#fbbf24',
+      desc: 'Mobile document & receipt verification platform featuring cryptographic timestamping and authentic capture.',
+      tech: 'Flutter · Dart · Cloud Backend',
+    },
+    {
+      num: '// 06',
+      title: 'POTD-NASA',
+      tag: 'SPACE EXPLORER',
+      color: '#38bdf8',
+      desc: 'Interactive Astronomy Picture of the Day explorer delivering daily high-resolution cosmos telemetry and imagery.',
+      tech: 'React.js · NASA API · Tailwind CSS',
+    },
+    {
+      num: '// 07',
+      title: 'TaskFlow',
+      tag: 'PRODUCTIVITY',
+      color: '#c084fc',
+      desc: 'High-efficiency task execution workspace with responsive state workflows, category tagging, and progress tracking.',
+      tech: 'React.js · State Management · UI',
+    },
+    {
+      num: '// 08',
+      title: 'PlayPulse',
+      tag: 'WEB UTILITY',
+      color: '#34d399',
+      desc: 'YouTube playlist duration calculator & analytics tool optimizing study sessions and video binge planning.',
+      tech: 'JavaScript · Web APIs · CSS3',
+    },
+    {
+      num: '// 09',
+      title: 'LeetCode Practice Archive',
+      tag: 'ALGORITHMS & DSA',
+      color: '#f97316',
+      desc: 'Daily algorithm & data structure solutions archive across diverse algorithmic patterns and competitive problems.',
+      tech: 'Python · Algorithms · Problem Solving',
+    },
   ];
+
+  var rows = [];
+  for (var i = 0; i < projects.length; i += 3) {
+    rows.push(projects.slice(i, i + 3));
+  }
 
   return (
     <div style={{
@@ -323,18 +375,24 @@
 
       <style>{`
         @keyframes pr-plasma { 0%, 100% { transform: translateY(0px) scale(1); opacity: 0.5; } 50% { transform: translateY(-25px) scale(1.1); opacity: 0.85; } }
-        #proj-plasma { animation: pr-plasma 8s ease-in-out infinite; }
+        #proj-plasma-1 { animation: pr-plasma 8s ease-in-out infinite; }
       `}</style>
 
-      <svg width="860" height="240" style={{ position: 'absolute', top: 0, left: 0 }}>
+      <svg width="860" height="600" style={{ position: 'absolute', top: 0, left: 0 }}>
         <defs>
           <radialGradient id="ppg-1" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="rgba(168, 85, 247, 0.45)" />
             <stop offset="60%" stopColor="rgba(126, 34, 206, 0.12)" />
             <stop offset="75%" stopColor="rgba(126, 34, 206, 0)" />
           </radialGradient>
+          <radialGradient id="ppg-2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="rgba(6, 214, 255, 0.35)" />
+            <stop offset="60%" stopColor="rgba(14, 116, 144, 0.1)" />
+            <stop offset="75%" stopColor="rgba(14, 116, 144, 0)" />
+          </radialGradient>
         </defs>
-        <ellipse id="proj-plasma" cx="430" cy="230" rx="400" ry="180" fill="url(#ppg-1)" />
+        <ellipse id="proj-plasma-1" cx="430" cy="540" rx="400" ry="240" fill="url(#ppg-1)" />
+        <ellipse cx="700" cy="180" rx="280" ry="170" fill="url(#ppg-2)" />
       </svg>
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -345,48 +403,54 @@
           </div>
         </div>
         <div style={{ display: 'flex', fontSize: 11, color: 'rgba(255, 255, 255, 0.4)', fontWeight: 600, letterSpacing: '1px' }}>
-          01 — 03
+          01 — 09
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: 14, flex: 1 }}>
-        {projects.map(function(p) {
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12, flex: 1 }}>
+        {rows.map(function(row, rIdx) {
           return (
-            <div key={p.title} style={{
-              flex: 1, display: 'flex', flexDirection: 'column',
-              background: 'rgba(255, 255, 255, 0.035)',
-              borderRadius: 14, padding: '16px 16px',
-              border: '1px solid rgba(255, 255, 255, 0.09)',
-              borderTop: '2px solid ' + p.color,
-              justifyContent: 'space-between'
-            }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <div style={{
-                    display: 'flex', padding: '2px 8px', borderRadius: 6,
-                    background: p.color + '18', border: '1px solid ' + p.color + '44',
-                    color: p.color, fontSize: 9, fontWeight: 800, letterSpacing: '1px'
+            <div key={'row-' + rIdx} style={{ display: 'flex', gap: 12, flex: 1 }}>
+              {row.map(function(p) {
+                return (
+                  <div key={p.title} style={{
+                    flex: 1, display: 'flex', flexDirection: 'column',
+                    background: 'rgba(255, 255, 255, 0.035)',
+                    borderRadius: 14, padding: '13px 14px',
+                    border: '1px solid rgba(255, 255, 255, 0.09)',
+                    borderTop: '2px solid ' + p.color,
+                    justifyContent: 'space-between'
                   }}>
-                    {p.tag}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <div style={{
+                          display: 'flex', padding: '2px 7px', borderRadius: 5,
+                          background: p.color + '18', border: '1px solid ' + p.color + '44',
+                          color: p.color, fontSize: 9, fontWeight: 800, letterSpacing: '0.8px'
+                        }}>
+                          {p.tag}
+                        </div>
+                        <div style={{ display: 'flex', fontSize: 9, color: 'rgba(255, 255, 255, 0.35)', fontWeight: 700 }}>
+                          {p.num}
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', fontSize: 14, fontWeight: 800, color: '#ffffff', letterSpacing: '-0.3px', marginTop: 2 }}>
+                        {p.title}
+                      </div>
+                      <div style={{ display: 'flex', fontSize: 11, color: 'rgba(225, 220, 250, 0.82)', lineHeight: 1.35 }}>
+                        {p.desc}
+                      </div>
+                    </div>
+                    <div style={{
+                      display: 'flex', fontSize: 10, fontWeight: 700,
+                      color: 'rgba(255, 255, 255, 0.55)', marginTop: 6,
+                      paddingTop: 6, borderTop: '1px solid rgba(255, 255, 255, 0.07)'
+                    }}>
+                      {p.tech}
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', fontSize: 10, color: 'rgba(255, 255, 255, 0.35)', fontWeight: 700 }}>
-                    {p.num}
-                  </div>
-                </div>
-                <div style={{ display: 'flex', fontSize: 16, fontWeight: 800, color: '#ffffff', letterSpacing: '-0.3px', marginTop: 2 }}>
-                  {p.title}
-                </div>
-                <div style={{ display: 'flex', fontSize: 12, color: 'rgba(225, 220, 250, 0.82)', lineHeight: 1.4 }}>
-                  {p.desc}
-                </div>
-              </div>
-              <div style={{
-                display: 'flex', fontSize: 11, fontWeight: 700,
-                color: 'rgba(255, 255, 255, 0.6)', marginTop: 8,
-                paddingTop: 8, borderTop: '1px solid rgba(255, 255, 255, 0.07)'
-              }}>
-                {p.tech}
-              </div>
+                );
+              })}
             </div>
           );
         })}
@@ -478,7 +542,7 @@
 
 ```aura width=130 height=44 link="https://lordnydorf.github.io/Portfolio/" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/safari/ffffff"
+  icon="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PGVsbGlwc2UgY3g9IjEyIiBjeT0iMTIiIHJ4PSI0IiByeT0iMTAiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+PGxpbmUgeDE9IjIiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTIiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+"
   text="Portfolio"
   backgroundColor="#0f0c24"
   width={130}
@@ -495,7 +559,7 @@
 
 ```aura width=120 height=44 link="https://github.com/LordNydorf" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/github/ffffff"
+  icon="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDBDNS4zNyAwIDAgNS4zNyAwIDEyYzAgNS4zMSAzLjQzNSA5Ljc5NSA4LjIwNSAxMS4zODUuNi4xMDUuODI1LS4yNTUuODI1LS41NyAwLS4yODUtLjAxNS0xLjIzLS4wMTUtMi4yMzUtMy4wMTUuNTU1LTMuNzk1LS43MzUtNC4wMzUtMS40MS0uMTM1LS4zNDUtLjcyLTEuNDEtMS4yMy0xLjY5NS0uNDItLjIyNS0xLjAyLS43OC0uMDE1LS43OTUuOTQ1LS4wMTUgMS42Mi44NyAxLjg0NSAxLjIzIDEuMDggMS44MTUgMi44MDUgMS4zMDUgMy40OTUuOTkuMTA1LS43OC40Mi0xLjMwNS43NjUtMS42MDUtMi42Ny0uMy01LjQ2LTEuMzM1LTUuNDYtNS45MjUgMC0xLjMwNS40NjUtMi4zODUgMS4yMy0zLjIyNS0uMTItLjMtLjU0LTEuNTMuMTItMy4xOCAwIDAgMS4wMDUtLjMxNSAzLjMgMS4yMy45Ni0uMjcgMS45OC0uNDA1IDMtLjQwNXMyLjA0LjEzNSAzIC40MDVjMi4yOTUtMS41NiAzLjMtMS4yMyAzLjMtMS4yMy42NiAxLjY1LjI0IDIuODguMTIgMy4xOC43NjUuODQgMS4yMyAxLjkwNSAxLjIzIDMuMjI1IDAgNC42MDUtMi44MDUgNS42MjUtNS40NzUgNS45MjUuNDM1LjM3NS44MSAxLjA5NS44MSAyLjIyIDAgMS42MDUtLjAxNSAyLjg5NS0uMDE1IDMuMyAwIC4zMTUuMjI1LjY5LjgyNS41N0ExMi4wMiAxMi4wMiAwIDAwMjQgMTJjMC02LjYzLTUuMzctMTItMTItMTJ6Ii8+PC9zdmc+"
   text="GitHub"
   backgroundColor="#090912"
   width={120}
@@ -512,7 +576,7 @@
 
 ```aura width=110 height=44 link="mailto:rohitkrishnanofficial@gmail.com" inline align=center
 <SocialMediaButton
-  icon="https://cdn.simpleicons.org/gmail/EA4335"
+  icon="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI0IDUuNDU3djEzLjkwOWMwIC45MDQtLjczMiAxLjYzNi0xLjYzNiAxLjYzNmgtMy44MTlWMTEuNzNMMTIgMTYuNjRsLTYuNTQ1LTQuOTF2OS4yNzNIMS42MzZBMS42MzYgMS42MzYgMCAwIDEgMCAxOS4zNjZWNS40NTdjMC0yLjAyMyAyLjMwOS0zLjE3OCAzLjkyNy0xLjk2NEw1LjQ1NSA0LjY0IDEyIDkuNTQ4bDYuNTQ1LTQuOTEgMS41MjgtMS4xNDVDMjEuNjkgMi4yOCAyNCAzLjQzNCAyNCA1LjQ1N3oiLz48L3N2Zz4="
   text="Email"
   backgroundColor="#180a0a"
   width={110}

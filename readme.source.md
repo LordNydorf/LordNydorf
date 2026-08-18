@@ -596,9 +596,3 @@
   ]}
 />
 ```
-
-```aura width=860 height=24 link="https://collectioneur.github.io/readme-aura/"
-<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', padding: 0, margin: 0 }}>
-  <span style={{ fontSize: 12, lineHeight: 1, color: 'rgba(192, 132, 252, 0.65)', fontWeight: 600, letterSpacing: '0.6px' }}>⚡ POWERED BY README-AURA · SATORI</span>
-</div>
-```

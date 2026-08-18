@@ -184,9 +184,10 @@
     <div style={{ display: 'flex', gap: 8, marginTop: 4, flexWrap: 'wrap' }}>
       {[
         { name: 'Flutter & Dart', color: '#38bdf8' },
-        { name: 'React & Next.js', color: '#a78bfa' },
-        { name: 'FastAPI & Python', color: '#34d399' }, 
-        { name: 'System Architecture', color: '#fbbf24' }
+        { name: 'React & FastAPI', color: '#a78bfa' },
+        { name: 'Gemini API & LLaMA 3', color: '#f43f5e' },
+        { name: 'YOLOv8 & Computer Vision', color: '#34d399' },
+        { name: 'Clean Architecture', color: '#fbbf24' }
       ].map(function(t, i) {
         return (
           <div key={t.name + '-' + i} style={{
@@ -212,8 +213,8 @@
   var stats = [
     { label: 'Repositories', value: repos, color: '#a855f7', sub: 'Public & Private', glow: 'rgba(168, 85, 247, 0.4)' },
     { label: 'Contributions', value: commits, color: '#10b981', sub: 'Commits & Reviews', glow: 'rgba(16, 185, 129, 0.4)' },
-    { label: 'Core Stack', value: 'Flutter · React · FastAPI', color: '#06d6ff', sub: 'Cross-Platform & APIs', glow: 'rgba(6, 214, 255, 0.4)' },
-    { label: 'Focus', value: 'Making quality software', color: '#f43f5e', sub: 'AI & Modern UX', glow: 'rgba(244, 63, 94, 0.4)' },
+    { label: 'Core Stack', value: 'Flutter · React · FastAPI', color: '#06d6ff', sub: 'Mobile, Web & APIs', glow: 'rgba(6, 214, 255, 0.4)' },
+    { label: 'Focus', value: 'AI Agents & Products', color: '#f43f5e', sub: 'LLMs & Modern UX', glow: 'rgba(244, 63, 94, 0.4)' },
   ];
 
   return (
@@ -287,73 +288,73 @@
     {
       num: '// 01',
       title: 'Pennora',
-      tag: 'FINTECH APP',
+      tag: 'DEVBYZERO 2ND PLACE',
       color: '#a855f7',
-      desc: 'Smart spare-change micro-investing platform democratizing wealth building through automated portfolio balancing.',
-      tech: 'Flutter · Firebase · Provider',
+      desc: 'Award-winning micro-investing platform turning everyday spending into investments with risk-based portfolio allocation.',
+      tech: 'Flutter · YugabyteDB · FastAPI',
     },
     {
       num: '// 02',
-      title: 'Smart Trip Planner',
-      tag: 'AI TRAVEL',
+      title: 'Itinera',
+      tag: 'GEMINI AI TRAVEL',
       color: '#06d6ff',
-      desc: 'Intelligent trip planning engine that generates tailored personalized travel itineraries using Google Gemini AI.',
-      tech: 'Flutter · Gemini AI · Dart',
+      desc: 'AI travel planner with real-time response streaming, voice speech-to-text, offline request queuing & clean architecture.',
+      tech: 'Flutter · Firebase · Gemini AI · Hive',
     },
     {
       num: '// 03',
-      title: 'PrepGenius',
-      tag: 'EDTECH PLATFORM',
-      color: '#10b981',
-      desc: 'Full-featured learning web application with solved previous year papers, curated video playlists & interactive quizzes.',
-      tech: 'React.js · JavaScript · Modern UI',
-    },
-    {
-      num: '// 04',
-      title: 'PPE-Detection-using-YOLO',
-      tag: 'AI / COMPUTER VISION',
+      title: 'PPE Detection YOLOv8',
+      tag: 'ACADEMIC / ML',
       color: '#f43f5e',
-      desc: 'Real-time safety compliance monitoring system detecting PPE violations in factory environments with YOLO models.',
+      desc: 'Trained YOLOv8 segmentation models detecting missing PPE safety gear in factory environments with high accuracy.',
       tech: 'Python · YOLOv8 · Computer Vision',
     },
     {
-      num: '// 05',
-      title: 'ProofShot',
-      tag: 'MOBILE & SECURITY',
-      color: '#fbbf24',
-      desc: 'Mobile document & receipt verification platform featuring cryptographic timestamping and authentic capture.',
-      tech: 'Flutter · Dart · Cloud Backend',
+      num: '// 04',
+      title: 'Bacterial Wilt Detection',
+      tag: 'RESEARCH PUBLICATION',
+      color: '#ec4899',
+      desc: '1D-ANN model detecting plant diseases in tomatoes earlier than visual stages using Hyperspectral Imaging (DOI: g9r8d4).',
+      tech: 'Hyperspectral · 1D-ANN · Deep Learning',
     },
     {
-      num: '// 06',
+      num: '// 05',
       title: 'POTD-NASA',
       tag: 'SPACE EXPLORER',
       color: '#38bdf8',
-      desc: 'Interactive Astronomy Picture of the Day explorer delivering daily high-resolution cosmos telemetry and imagery.',
-      tech: 'React.js · NASA API · Tailwind CSS',
+      desc: 'Astronomy Picture of the Day explorer delivering daily high-resolution cosmos telemetry and NASA APOD data.',
+      tech: 'React.js · JavaScript · NASA API',
     },
     {
-      num: '// 07',
+      num: '// 06',
       title: 'TaskFlow',
       tag: 'PRODUCTIVITY',
       color: '#c084fc',
       desc: 'High-efficiency task execution workspace with responsive state workflows, category tagging, and progress tracking.',
-      tech: 'React.js · State Management · UI',
+      tech: 'React.js · JavaScript · Netlify',
+    },
+    {
+      num: '// 07',
+      title: 'PlayPulse',
+      tag: 'MEDIA ANALYTICS',
+      color: '#34d399',
+      desc: 'YouTube playlist duration calculator & analytics tool optimizing study sessions and video binge planning.',
+      tech: 'Python · Flask · YouTube API v3',
     },
     {
       num: '// 08',
-      title: 'PlayPulse',
-      tag: 'WEB UTILITY',
-      color: '#34d399',
-      desc: 'YouTube playlist duration calculator & analytics tool optimizing study sessions and video binge planning.',
-      tech: 'JavaScript · Web APIs · CSS3',
+      title: 'PrepGenius',
+      tag: 'EDTECH PLATFORM',
+      color: '#10b981',
+      desc: 'Comprehensive learning platform with solved question papers (CAT 2018–2023), video playlists & practice quizzes.',
+      tech: 'React.js · JavaScript · Modern UI',
     },
     {
       num: '// 09',
       title: 'LeetCode Practice Archive',
       tag: 'ALGORITHMS & DSA',
       color: '#f97316',
-      desc: 'Daily algorithm & data structure solutions archive across diverse algorithmic patterns and competitive problems.',
+      desc: 'Daily algorithmic problem solving repository tackling advanced algorithms, data structures & optimization patterns.',
       tech: 'Python · Algorithms · Problem Solving',
     },
   ];
@@ -460,23 +461,28 @@
 })()
 ```
 
-```aura width=860 height=200
+```aura width=860 height=260
 (function() {
   var categories = [
     {
-      title: 'Mobile & Frontend',
+      title: 'Languages',
+      color: '#38bdf8',
+      items: ['Dart', 'Python', 'Kotlin', 'Java', 'SQL (Postgres)', 'JavaScript', 'HTML/CSS', 'Bash']
+    },
+    {
+      title: 'Frameworks & Cloud',
       color: '#a855f7',
-      items: ['Flutter', 'Dart', 'React.js', 'Next.js', 'TypeScript', 'Tailwind CSS']
+      items: ['Flutter', 'React', 'FastAPI', 'Flask', 'Firebase', 'Hive', 'Google Cloud Platform', 'Clean Architecture']
     },
     {
-      title: 'Backend & AI',
-      color: '#06d6ff',
-      items: ['FastAPI', 'Python', 'Google Gemini AI', 'Firebase', 'Node.js', 'REST APIs']
+      title: 'AI / ML & Libraries',
+      color: '#f43f5e',
+      items: ['Gemini API', 'LLaMA 3', 'TensorFlow', 'scikit-learn', 'YOLOv8', 'Speech-to-Text', 'pandas', 'NumPy', 'SFTTrainer']
     },
     {
-      title: 'Systems & DevOps',
+      title: 'Tools & Ecosystem',
       color: '#10b981',
-      items: ['System Architecture', 'YOLOv8', 'Git & GitHub', 'State Management']
+      items: ['Git & GitHub', 'VS Code', 'Antigravity', 'Cursor', 'Windsurf', 'PyCharm', 'IntelliJ', 'Streamlit', 'YouTube API v3']
     },
   ];
 
@@ -485,7 +491,7 @@
       width: '100%', height: '100%',
       background: '#040409',
       display: 'flex', flexDirection: 'column',
-      fontFamily: 'Inter, sans-serif', padding: '18px 28px', gap: 14,
+      fontFamily: 'Inter, sans-serif', padding: '18px 28px', gap: 13,
       borderRadius: 18, border: '1px solid rgba(168, 85, 247, 0.3)',
       position: 'relative', overflow: 'hidden',
     }}>
@@ -495,7 +501,7 @@
         #tg-plasma { animation: tech-plasma 7s ease-in-out infinite; }
       `}</style>
 
-      <svg width="860" height="200" style={{ position: 'absolute', top: 0, left: 0 }}>
+      <svg width="860" height="260" style={{ position: 'absolute', top: 0, left: 0 }}>
         <defs>
           <radialGradient id="t-pl" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="rgba(6, 214, 255, 0.45)" />
@@ -503,30 +509,30 @@
             <stop offset="70%" stopColor="rgba(14, 116, 144, 0)" />
           </radialGradient>
         </defs>
-        <ellipse id="tg-plasma" cx="720" cy="180" rx="240" ry="150" fill="url(#t-pl)" />
+        <ellipse id="tg-plasma" cx="720" cy="220" rx="260" ry="170" fill="url(#t-pl)" />
       </svg>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <div style={{ width: 8, height: 8, borderRadius: 2, background: '#06d6ff', display: 'flex' }} />
         <div style={{ display: 'flex', fontSize: 11, fontWeight: 800, color: '#67e8f9', letterSpacing: '2.5px' }}>
-          NEURAL TECH STACK & CAPABILITIES
+          TECH STACK & CAPABILITIES
         </div>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
         {categories.map(function(cat) {
           return (
             <div key={cat.title} style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <div style={{ display: 'flex', fontSize: 11, fontWeight: 800, color: cat.color, letterSpacing: '0.8px', width: 145 }}>
                 {cat.title}
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7, flex: 1 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, flex: 1 }}>
                 {cat.items.map(function(item) {
                   return (
                     <div key={item} style={{
-                      display: 'flex', padding: '4px 12px', borderRadius: 8,
+                      display: 'flex', padding: '3px 10px', borderRadius: 7,
                       background: cat.color + '15', border: '1px solid ' + cat.color + '38',
-                      color: 'rgba(250, 245, 255, 0.95)', fontSize: 12, fontWeight: 700,
+                      color: 'rgba(250, 245, 255, 0.95)', fontSize: 11, fontWeight: 700,
                     }}>{item}</div>
                   );
                 })}

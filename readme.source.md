@@ -163,7 +163,7 @@
         color: '#d8b4fe', fontSize: 11, fontWeight: 800, letterSpacing: '1.5px'
       }}>
         <div id="live-beacon" style={{ width: 7, height: 7, borderRadius: 4, background: '#10b981', display: 'flex' }} />
-        FULL-STACK & AI ARCHITECT
+        SOFTWARE ENGINEER
       </div>
       <div style={{ display: 'flex', fontSize: 12, color: 'rgba(216, 180, 254, 0.7)', fontWeight: 600, letterSpacing: '0.5px' }}>
         // SYS.LOC: KOCHI, IN
@@ -214,7 +214,7 @@
     { label: 'Repositories', value: repos, color: '#a855f7', sub: 'Public & Private', glow: 'rgba(168, 85, 247, 0.4)' },
     { label: 'Contributions', value: commits, color: '#10b981', sub: 'Commits & Reviews', glow: 'rgba(16, 185, 129, 0.4)' },
     { label: 'Core Stack', value: 'Flutter · React · FastAPI', color: '#06d6ff', sub: 'Cross-Platform & APIs', glow: 'rgba(6, 214, 255, 0.4)' },
-    { label: 'Domain Focus', value: 'AI Agents & Products', color: '#f43f5e', sub: 'LLMs & Modern UX', glow: 'rgba(244, 63, 94, 0.4)' },
+    { label: 'Focus', value: 'Making quality software', color: '#f43f5e', sub: 'AI & Modern UX', glow: 'rgba(244, 63, 94, 0.4)' },
   ];
 
   return (
@@ -412,7 +412,7 @@
     {
       title: 'Systems & DevOps',
       color: '#10b981',
-      items: ['System Architecture', 'YOLO / CV', 'Git & GitHub', 'Docker', 'State Management']
+      items: ['System Architecture', 'YOLOv8', 'Git & GitHub', 'State Management']
     },
   ];
 
@@ -506,23 +506,6 @@
     { offset: '50%', color: '#a855f7' },
     { offset: '80%', color: '#1a1a2e' },
     { offset: '100%', color: '#ffffff' },
-  ]}
-/>
-```
-
-```aura width=120 height=44 link="https://x.com/r_hxt_" inline align=center
-<SocialMediaButton
-  icon="https://cdn.simpleicons.org/x/ffffff"
-  text="X.com"
-  backgroundColor="#090912"
-  width={120}
-  height={44}
-  gradientStops={[
-    { offset: '0%', color: '#06d6ff' },
-    { offset: '30%', color: '#111122' },
-    { offset: '50%', color: '#ffffff' },
-    { offset: '70%', color: '#111122' },
-    { offset: '100%', color: '#06d6ff' },
   ]}
 />
 ```
